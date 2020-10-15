@@ -92,6 +92,16 @@ fi
 
 }
 
+function emails(){
+pattern="^([^0-9][a-zA-Z0-9\+\-\.]+)@([a-zA-Z0-9]+)\.([a-z]{2,4})\.([a-z]{2,4})$"
+read -p "Enter Sample Emails: " x
+
+if [[ $x =~ $pattern ]]; then
+   echo "Pattern matches"
+else
+   echo "Error"
+fi
+}
 
 function main(){
 
@@ -103,5 +113,6 @@ function main(){
 	password2
 	password3
 	password4
+	emails
 }
 main
