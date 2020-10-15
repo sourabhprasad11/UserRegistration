@@ -58,6 +58,19 @@ else
 fi
 }
 
+function password2(){
+pattern="^([A-Z]+)[a-zA-Z]{8,}$"
+read -p "Enter Password(min.8 & 1 uppercase): " x
+
+if [[ $x =~ $pattern ]]; then
+   echo "Pattern matches"
+else
+   echo "Error"
+fi
+}
+
+
+
 
 function main(){
 
@@ -66,7 +79,7 @@ function main(){
 	Validemail
 	mobilenum
 	password1
-
+	password2
 
 
 }
