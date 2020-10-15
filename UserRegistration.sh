@@ -80,6 +80,18 @@ else
 fi
 }
 
+function password4(){
+pattern="^([A-Z]+)[0-9]+[._@&*^#]{1}[a-zA-Z0-9.\_\@\&\*\^\^\]{8,}$"
+read -p "Enter Password(min.8 -1st uppercase 2nd num 3rd sp.character): " x
+
+if [[ $x =~ $pattern ]]; then
+   echo "Pattern matches"
+else
+   echo "Error"
+fi
+
+}
+
 
 function main(){
 
@@ -90,6 +102,6 @@ function main(){
 	password1
 	password2
 	password3
-
+	password4
 }
 main
