@@ -47,7 +47,16 @@ else
 fi
 }
 
+function password1(){
+pattern="^[a-z]{8,}$"
+read -p "Enter Password(min.8): " x
 
+if [[ $x =~ $pattern ]]; then
+   echo "Pattern matches"
+else
+   echo "Error"
+fi
+}
 
 
 function main(){
@@ -56,6 +65,9 @@ function main(){
 	lastname
 	Validemail
 	mobilenum
+	password1
+
+
 
 }
 main
