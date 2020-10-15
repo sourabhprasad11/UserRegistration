@@ -69,7 +69,16 @@ else
 fi
 }
 
+function password3(){
+pattern="^([A-Z]+)[0-9]+[a-zA-Z0-9]{8,}$"
+read -p "Enter Password(min.8 -1st uppercase 2nd num): " x
 
+if [[ $x =~ $pattern ]]; then
+   echo "Pattern matches"
+else
+   echo "Error"
+fi
+}
 
 
 function main(){
@@ -80,7 +89,7 @@ function main(){
 	mobilenum
 	password1
 	password2
-
+	password3
 
 }
 main
