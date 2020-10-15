@@ -24,11 +24,28 @@ else
 fi
 }
 
+function Validemail(){
+
+pattern="^([^0-9][a-zA-Z\_\-\.]+)@([a-zA-Z]+)\.([a-z]{2,4})\.([a-z]{2,4})$"
+read -p "Enter Email(abc.xyz@bl.co.in): " x
+
+if [[ $x =~ $pattern ]]; then
+   echo "Pattern matches"
+else
+   echo "Error"
+fi
+
+}
+
+
 
 
 function main(){
 
 	firstname
 	lastname
+	Validemail
+
+
 }
 main
